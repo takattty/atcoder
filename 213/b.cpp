@@ -10,13 +10,22 @@ int main() {
   for (int i=0; i<n; i++) {
     cin >> vec.at(i);
   }
-
   for (int i=0; i<n; i++) {
-    ans[i] = vec.at(i);
-  }
-  for (int i=0; i<n; i++) {
-    cout << ans[i] << endl;
+    cout << vec.at(i) << endl;
   }
 
-  cout << ans.at(n-2) << endl;
+  for (int i=0; i<n; i++) {
+    ans[vec.at(i)] = i+1;
+  }
+
+  for (int i=0; i<n; i++) {
+    cout << ans[vec.at(i)] << endl;
+  }
+
+  for (auto p : ans) {
+    auto k = p.first;
+    auto v = p.second;
+    cout << k << " => " << v << endl;
+  }
+
 }
