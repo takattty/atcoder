@@ -10,4 +10,4 @@ num.times {
 
 new_value_hash = value_hash.sort_by { |key, value| value }
 player = new_value_hash[num-2][0]
-p player+1
+puts player+1
