@@ -1,20 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-  int s, t, result=0;
+int main() {  
+    long long n;
+    cin >> n;
+    int k=1;
 
-  cin >> s >> t;
+    while(pow(2, k) <= n) {
+        if(pow(2, k) > n) {
+            break;
+        }
+        k++;
+    }
 
-  for(int a=0; a<=100; a++) {
-      for(int b=0; b<=100; b++) {
-          for(int c=0; c<=100; c++) {
-              if( a+b+c <= s && a*b*c <= t ) {
-                  result++;
-              }
-          }
-      }
-  }
-
-  cout << result << endl;
+    cout << k-1 << endl;
 }
