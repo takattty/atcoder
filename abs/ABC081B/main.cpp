@@ -19,8 +19,8 @@ int main() {
     }
 
     while(isEven(a)) {
-        for(int i=0; i<n; i++) {
-            a.at(i) = a.at(i) / 2;
+        for(int &x : a) {
+            x = x / 2;
         }
         result++;
     }
