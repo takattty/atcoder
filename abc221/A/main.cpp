@@ -4,11 +4,6 @@ using namespace std;
 int main() {
     int a, b;
     cin >> a >> b;
-
-    if (a == b) {
-        cout << 1 << endl;
-    } else {
-        cout << pow(32, a-b) << endl;
-    }
-
+    // powは1.07374e+の様にdouble型で値を返す。のでキャストしてあげないといけない、
+    cout << (int)pow(32, a-b) << endl;
 }
