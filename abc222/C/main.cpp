@@ -21,31 +21,23 @@ int main() {
             int player1 = result.at(2*k).second;
             int player2 = result.at(2*k+1).second;
             if(data.at(player1-1).at(j) == 'G' && data.at(player2-1).at(j) == 'C') {
-                result.at(2*k).first++;
+                result.at(2*k).first--;
             } else if(data.at(player1-1).at(j) == 'G' && data.at(player2-1).at(j) == 'P') {
-                result.at(2*k+1).first++;
+                result.at(2*k+1).first--;
             } else if(data.at(player1-1).at(j) == 'C' && data.at(player2-1).at(j) == 'G') {
-                result.at(2*k+1).first++;
+                result.at(2*k+1).first--;
             } else if(data.at(player1-1).at(j) == 'C' && data.at(player2-1).at(j) == 'P') {
-                result.at(2*k).first++;
+                result.at(2*k).first--;
             } else if(data.at(player1-1).at(j) == 'P' && data.at(player2-1).at(j) == 'G') {
-                result.at(2*k).first++;
+                result.at(2*k).first--;
             } else if(data.at(player1-1).at(j) == 'P' && data.at(player2-1).at(j) == 'C') {
-                result.at(2*k+1).first++;
+                result.at(2*k+1).first--;
             }
         }
         sort(result.begin(), result.end());
-        reverse(result.begin(), result.end());
-    }
-
-    for(int i=0; i<2*n-1; i++) {
-        if(result.at(i).first == result.at(i+1).first && result.at(i).second > result.at(i+1).second) {
-            sort(result.begin(), result.end());
-            reverse(result.begin(), result.end());
-        }
     }
 
     for(int i=0; i<2*n; i++) {
-        cout << result.at(i).first << " : " << result.at(i).second << endl;
+        cout << result.at(i).second << endl;
     }
 }
