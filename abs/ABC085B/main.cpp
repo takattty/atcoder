@@ -42,4 +42,15 @@ int main() {
     res.erase(unique(res.begin(), res.end()), res.end());
 
     cout << res.size() << endl;
+
+    // int n; cin >> n;
+    // set<int> S;
+
+    // for(int i=0; i<n; i++) {
+    //     int num = 0;
+    //     cin >> num;
+    //     S.insert(num);
+    // }
+
+    // cout << S.size() << endl;
 }
